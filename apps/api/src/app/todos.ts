@@ -1,7 +1,7 @@
 import { Express } from 'express';
-import { Todo } from '@myorg/data';
+import { ITodos } from '@myorg/types';
 
-const todos: Todo[] = [{ title: 'Todo 1' }, { title: 'Todo 2' }];
+const todos: ITodos.Todo[] = [{ title: 'Todo 1' }, { title: 'Todo 2' }];
 
 export function addTodoRoutes(app: Express) {
   app.get('/api/todos', (req, resp) => resp.send(todos));

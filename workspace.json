@@ -2,9 +2,12 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
-    "data": "libs/data",
-    "todos": "apps/todos",
-    "todos-e2e": "apps/todos-e2e",
-    "ui": "libs/ui"
+    "frontend-api": "libs/frontend-api",
+    "redux": "libs/redux",
+    "token-market": "apps/token-market",
+    "token-market-e2e": "apps/token-market-e2e",
+    "types": "libs/types",
+    "ui": "libs/ui",
+    "ui-e2e": "apps/ui-e2e"
   }
 }
