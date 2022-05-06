@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import classNames from 'classnames';
 import { Todo } from '@myorg/data';
 import { Todos } from '@myorg/ui';
 
@@ -31,7 +32,9 @@ const App = () => {
     <>
       <h1>Todos</h1>
       <Todos todos={todos} />
-      <button id={'add-todo'} onClick={addTodo}>
+      <button id={'add-todo'} onClick={addTodo} className={classNames({
+        test: true
+      })}>
         Add Todo
       </button>
     </>
