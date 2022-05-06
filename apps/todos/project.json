@@ -49,7 +49,8 @@
       "options": {
         "buildTarget": "todos:build",
         "hmr": true,
-        "proxyConfig": "apps/todos/proxy.conf.json"
+        "proxyConfig": "apps/todos/proxy.conf.json",
+        "port": 8781
       },
       "configurations": {
         "development": {

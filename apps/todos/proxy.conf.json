@@ -1,4 +1,9 @@
 {
+  "/api/v1": {
+    "target": "https://hypermath.develop.staging.mathem.space/",
+    "secure": true,
+    "changeOrigin": true
+  },
   "/api": {
     "target": "http://localhost:3333",
     "secure": false

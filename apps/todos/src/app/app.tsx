@@ -6,9 +6,14 @@ const App = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
 
   useEffect(() => {
+    console.log('init');
     fetch('/api/todos')
       .then((_) => _.json())
       .then(setTodos);
+
+    fetch('/api/v1/courses')
+      .then((_) => _.json())
+      .then(data => console.log(data));
   }, []);
 
   function addTodo() {
