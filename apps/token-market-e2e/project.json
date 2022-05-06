@@ -1,0 +1,28 @@
+{
+  "root": "apps/token-market-e2e",
+  "sourceRoot": "apps/token-market-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/token-market-e2e/cypress.json",
+        "devServerTarget": "token-market:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "token-market:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/token-market-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["token-market"]
+}

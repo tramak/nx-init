@@ -1,0 +1,85 @@
+@import '../../scss';
+
+.header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: $mainLeftRightPadding;
+  padding-right: $mainLeftRightPadding;
+
+  //@include mediaZr() {
+  //
+  //}
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo__icon {
+  margin-right: 13px;
+}
+
+.right__side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo__title {
+  margin-top: 7px;
+  font-family: $mainFontFamily;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $fontSizeSubSubHeader;
+  line-height: 125%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $commonColor;
+  text-align: left;
+}
+
+.links {
+  display: flex;
+}
+
+.link {
+  font-family: $mainFontFamily;
+  font-style: normal;
+  font-weight: 500;
+  font-size: $fontSizeMainHeader;
+  line-height: 23px;
+  letter-spacing: 0.03em;
+  color: $contentColorLight;
+  text-decoration: none;
+  margin-right: 59px;
+  &:last-child {
+    margin-right: 0;
+  }
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.auth__button {
+  padding: 10px 55px;
+  background: #ffffff;
+  border: 1px solid $commonColor;
+  box-sizing: border-box;
+  border-radius: 15px;
+  font-family: $mainFontFamily;
+  font-style: normal;
+  font-weight: 600;
+  font-size: $fontSizeSubHeader;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $commonColor ;
+  cursor: pointer;
+}
+

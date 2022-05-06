@@ -1,0 +1,82 @@
+{
+  "root": "apps/token-market",
+  "sourceRoot": "apps/token-market/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/token-market",
+        "index": "apps/token-market/src/index.html",
+        "baseHref": "/",
+        "main": "apps/token-market/src/main.tsx",
+        "polyfills": "apps/token-market/src/polyfills.ts",
+        "tsConfig": "apps/token-market/tsconfig.app.json",
+        "assets": ["apps/token-market/src/favicon.ico", "apps/token-market/src/assets"],
+        "styles": ["apps/token-market/src/styles.scss"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/token-market/src/environments/environment.ts",
+              "with": "apps/token-market/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "token-market:build",
+        "hmr": true,
+        "proxyConfig": "apps/token-market/proxy.conf.json",
+        "port": 8781
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "token-market:build:development"
+        },
+        "production": {
+          "buildTarget": "token-market:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/token-market/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/token-market"],
+      "options": {
+        "jestConfig": "apps/token-market/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

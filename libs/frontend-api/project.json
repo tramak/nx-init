@@ -1,0 +1,32 @@
+{
+  "root": "libs/frontend-api",
+  "sourceRoot": "libs/frontend-api/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/frontend-api",
+        "main": "libs/frontend-api/src/index.ts",
+        "tsConfig": "libs/frontend-api/tsconfig.lib.json",
+        "assets": ["libs/frontend-api/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/frontend-api/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/frontend-api"],
+      "options": {
+        "jestConfig": "libs/frontend-api/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

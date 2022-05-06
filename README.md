@@ -1,7 +1,49 @@
 
 
-# Myorg
+# Token Marken
 
+Запуск storybook для презентационых компонентов
+
+`nx run ui:storybook`
+
+Запуск тестов
+
+`nx run ui:test` 
+
+`nx run token-market:test`
+
+Запуск End to End тестов для презентационных компонентов
+
+`nx e2e ui-e2e --watch` - в режиме разработки
+
+`nx e2e ui-e2e --headless` - тестируем всё без запуска браузера
+
+Запуск End to End тестов для сайта
+
+`nx e2e token-market-e2e --watch --baseUrl=http://localhost:8781` - в режиме разработки
+
+`nx e2e token-market-e2e --headless --baseUrl=http://localhost:8781` - тестируем всё без запуска браузера 
+
+Запуск проекта в режиме разработки
+
+`nx serve` - front
+
+`nx serve api` - back
+
+Сборка проекта
+
+`nx build` - front
+
+
+### Документация по API
+- [Общие положения](./docs/api/common.md)
+
+### Документация по дизайну
+- [Размеры экранов](./docs/design/window.md)
+
+
+
+<!---
 This project was generated using [Nx](https://nx.dev).
 
 <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
@@ -92,3 +134,4 @@ Nx Cloud pairs with Nx in order to enable you to build and test code more rapidl
 Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
 
 Visit [Nx Cloud](https://nx.app/) to learn more.
+-->

@@ -1,15 +1,15 @@
-import { Todo } from '@myorg/data';
-import './todos.module.css';
+import { ITodos } from '@myorg/types';
+import styles from './todos.module.scss';
 
 export interface TodosProps {
-  todos: Todo[];
+  todos: ITodos.Todo[];
 }
 
 export function Todos(props: TodosProps) {
   return (
     <ul>
       {props.todos.map((t) => (
-        <li className={'todo'}>{t.title}</li>
+        <li key={t.title} className={styles.todo}>{t.title}!!</li>
       ))}
     </ul>
   );
