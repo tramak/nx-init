@@ -3,8 +3,11 @@
   "projects": {
     "api": "apps/api",
     "data": "libs/data",
+    "redux-todos": "libs/redux-todos",
     "todos": "apps/todos",
+    "todos-api": "libs/todos-api",
     "todos-e2e": "apps/todos-e2e",
+    "todos-types": "libs/todos-types",
     "ui": "libs/ui",
     "ui-e2e": "apps/ui-e2e"
   }

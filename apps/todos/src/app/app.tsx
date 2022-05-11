@@ -1,31 +1,18 @@
 import { useEffect, useState } from 'react';
 import classNames from 'classnames';
-import { Todo } from '@myorg/data';
+import { actions, useAppSelector } from '@myorg/redux-todos';
+import { ITodos } from '@myorg/todos-types';
 import { Todos } from '@myorg/ui';
 
 const App = () => {
-  const [todos, setTodos] = useState<Todo[]>([]);
+  const todos = useAppSelector(state => state.todos.data);
 
   useEffect(() => {
-    console.log('init');
-    fetch('/api/todos')
-      .then((_) => _.json())
-      .then(setTodos);
-
-    fetch('/api/v1/courses')
-      .then((_) => _.json())
-      .then(data => console.log(data));
+    actions.todos.fetchTodos();
   }, []);
 
   function addTodo() {
-    fetch('/api/addTodo', {
-      method: 'POST',
-      body: '',
-    })
-      .then((_) => _.json())
-      .then((newTodo) => {
-        setTodos([...todos, newTodo]);
-      });
+    actions.todos.fetchAddTodo({ title: 'test' });
   }
 
   return (

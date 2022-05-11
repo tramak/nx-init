@@ -1,0 +1,32 @@
+{
+  "root": "libs/redux-todos",
+  "sourceRoot": "libs/redux-todos/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/redux-todos",
+        "main": "libs/redux-todos/src/index.ts",
+        "tsConfig": "libs/redux-todos/tsconfig.lib.json",
+        "assets": ["libs/redux-todos/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/redux-todos/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/redux-todos"],
+      "options": {
+        "jestConfig": "libs/redux-todos/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
