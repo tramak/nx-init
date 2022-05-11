@@ -2,7 +2,7 @@ import { IResponse } from '@myorg/todos-types';
 
 export interface IMetaData {
   promiseActions: {
-    resolve: (data?: any) => void;
+    resolve: (data?: unknown) => void;
     reject: (errors?: IResponse.Errors) => void;
   }
 }

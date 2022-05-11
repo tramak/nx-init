@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import classNames from 'classnames';
 import { actions, useAppSelector } from '@myorg/redux-todos';
-import { ITodos } from '@myorg/todos-types';
 import { Todos } from '@myorg/ui';
 
 const App = () => {

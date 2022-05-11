@@ -26,8 +26,7 @@ export const call = function* (func: any, payload?: any, meta?: IMetaData): any 
         reject(data?.errors);
       }
     }
-   
-    console.log({ e });
+
     throw e;
   }
 }
