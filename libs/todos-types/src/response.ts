@@ -30,7 +30,7 @@ export namespace IResponse {
   export interface ErrorResponse {
     code: Codes;
     error?: string;
-    errors?: Errors[];
+    errors?: Errors;
   }
 
   export type ResponseSuccess<P> = {

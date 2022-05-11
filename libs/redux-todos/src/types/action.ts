@@ -1,12 +1,14 @@
 import { IResponse } from '@myorg/todos-types';
 
-export interface Action<P> {
+export interface IMetaData {
+  promiseActions: {
+    resolve: (data?: any) => void;
+    reject: (errors?: IResponse.Errors) => void;
+  }
+}
+
+export interface IAction<P> {
   type: string;
   payload: P;
-  meta?: {
-    promiseActions: {
-      resolve: () => void;
-      reject: (errors: IResponse.Errors) => void;
-    }
-  }
+  meta?: IMetaData;
 }
