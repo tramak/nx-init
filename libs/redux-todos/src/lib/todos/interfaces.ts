@@ -1,8 +1,8 @@
 import { ITodos } from '@myorg/todos-types';
-import { Action } from '../../types/action';
+import { IAction } from '../../types/action';
 
-export type IFetchAddTodo = Action<ITodos.Todo>;
+export type IFetchAddTodo = IAction<ITodos.Todo>;
 
 // slice
-export type ISetTodosAction = Action<ITodos.Todo[]>;
-export type IAddTodoAction = Action<ITodos.Todo>;
+export type ISetTodosAction = IAction<ITodos.Todo[]>;
+export type IAddTodoAction = IAction<ITodos.Todo>;
