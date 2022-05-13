@@ -4,6 +4,9 @@ export interface IMetaData {
   promiseActions: {
     resolve: (data?: unknown) => void;
     reject: (errors?: IResponse.Errors) => void;
+  },
+  request?: {
+    id: string;
   }
 }
 

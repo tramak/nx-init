@@ -1,4 +1,4 @@
-import { put, select, takeEvery, all } from 'redux-saga/effects';
+import { put, takeEvery } from 'redux-saga/effects';
 import { ITodos } from '@myorg/todos-types';
 import * as api from '@myorg/todos-api';
 import * as actions from './actions';

@@ -5,7 +5,7 @@ import { IAction } from '../types/action';
 import { call } from './call';
 
 const registerRequest = function <A extends IAction<any>>(
-  effect = takeEvery,
+  effect: typeof takeEvery,
   actionName: string,
   apiFunc: (data: any) => Promise<AxiosResponse<any>>,
   success: (data: any) => void,
