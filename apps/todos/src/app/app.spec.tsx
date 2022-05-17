@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render } from '../test-utils';
 
 import App from './app';
 
@@ -12,6 +12,6 @@ describe('App', () => {
   it('should have a greeting as the title', () => {
     const { getByText } = render(<App />);
 
-    expect(getByText(/Welcome todos/gi)).toBeTruthy();
+    expect(getByText(/Add Todo/gi)).toBeTruthy();
   });
 });
