@@ -1,4 +1,19 @@
 export namespace IResponse {
+  export type Response<P, E = unknown> = ResponseSuccess<P> | ErrorResponse<E>;
+
+  export interface ErrorResponse<E = unknown> {
+    code: Codes;
+    error?: string;
+    messages?: Errors;
+    payload?: E;
+  }
+
+  export type ResponseSuccess<P> = {
+    code: Codes;
+    payload: P;
+    messages?: Messages;
+  }
+
   export enum Codes {
     // 200
     SUCCESS = '200:SUCCESS',
@@ -19,24 +34,20 @@ export namespace IResponse {
     // и другие...
   }
 
-  export interface Error {
-    type?: string;
+  export enum MessageType {
+    ERROR = 'error',
+    INFO = 'info'
+  }
+
+  export interface Message {
+    type?: MessageType;
     message: string;
+  }
+
+  export interface Error extends Message {
     field?: string;
   }
 
+  export type Messages = Array<Message>;
   export type Errors = Array<Error>;
-
-  export interface ErrorResponse {
-    code: Codes;
-    error?: string;
-    errors?: Errors;
-  }
-
-  export type ResponseSuccess<P> = {
-    code: Codes;
-    payload: P;
-  }
-
-  export type Response<P> = ErrorResponse | ResponseSuccess<P>;
 }

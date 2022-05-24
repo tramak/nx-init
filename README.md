@@ -35,6 +35,10 @@
 `nx build` - front
 
 
+## Документация по API
+- [Общие положения](./docs/api/common.md)
+
+
 
 <!---
 This project was generated using [Nx](https://nx.dev).
