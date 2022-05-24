@@ -18,7 +18,7 @@ const registerRequest = function <A extends IAction<any>>(
     } catch(e: AxiosError | unknown) {
       const axiosError = e as AxiosError;
       if (axiosError.isAxiosError) {
-        const data = axiosError.response?.data as IResponse.ErrorResponse;
+        const data = axiosError.response?.data as IResponse.ResponseError;
 
         if (error) {
           yield error(data.messages);
