@@ -23,7 +23,7 @@ export const call = function* (func: any, payload?: any, meta?: IMetaData): any 
     const axiosError = e as AxiosError;
     let error = '';
     if (axiosError.isAxiosError) {
-      const data = axiosError.response?.data as IResponse.ErrorResponse;
+      const data = axiosError.response?.data as IResponse.ResponseError;
 
       if (data.messages?.length) {
         error = data.messages[0].message;

@@ -24,9 +24,9 @@
 
 ```typescript
 export namespace IResponse {
-  export type Response<P, E = unknown> = ResponseSuccess<P> | ErrorResponse<E>;
+  export type Response<P, E = unknown> = ResponseSuccess<P> | ResponseError<E>;
 
-  export interface ErrorResponse<E = unknown> {
+  export interface ResponseError<E = unknown> {
     code: Codes;
     error?: string;
     messages?: Errors;

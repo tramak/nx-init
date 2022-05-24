@@ -33,11 +33,11 @@ const init = function* () {
 
 const fetchTodosSuccess = function* (data: ITodos.Todo[]) {
   yield put(actions.setTodos(data));
-}
+};
 
 const fetchAddTodoSuccess = function* (data: ITodos.Todo) {
   yield put(actions.addTodo(data));
-}
+};
 
 export default [
   init,
