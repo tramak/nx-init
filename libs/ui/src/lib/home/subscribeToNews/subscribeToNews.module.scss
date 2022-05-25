@@ -1,7 +1,22 @@
 @import '../../../scss';
 
+.title {
+  margin: 0;
+
+  text-align: left;
+  font-family: $mainFontFamily;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $fontSizeBaseBiggest;
+  line-height: 125%;
+  letter-spacing: 0.04em;
+  white-space: pre-wrap;
+  color: $commonColor;
+}
+
 .news_subscription {
-  padding-bottom: 200px;
+  margin-top: 150px;
+  margin-bottom: 200px;
   &__content {
     margin-top: 50px;
     display: flex;

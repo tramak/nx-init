@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import classNames from 'classnames';
 import { actions, useAppSelector, useRequest } from '@myorg/redux';
-import { Todos, Header, SloganAndVideo, Advantages } from '@myorg/ui';
+import { Todos, Header, SloganAndVideo, Advantages, SubscribeToNews } from '@myorg/ui';
 import { Routes, Route } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -27,6 +27,7 @@ const Demo = () => {
       <Header status='' logout={() => {}} scrollToQuestionList={() => {}} />
       <SloganAndVideo />
       <Advantages />
+      <SubscribeToNews />
 
       {/*<h1>Todos</h1>*/}
 
