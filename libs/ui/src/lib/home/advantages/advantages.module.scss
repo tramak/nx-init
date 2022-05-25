@@ -1,0 +1,104 @@
+@import '../../../scss';
+
+.advantages {
+  margin-top: 150px;
+  position: relative;
+  &__img_step_graph_mobile {
+    display: none;
+  }
+  &__img_step_graph {
+    display: block;
+  }
+  &__step_graph {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  &__steps_text {
+    position: absolute;
+    height: 100%;
+    padding: 0 $mainLeftRightPadding;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+  &__text_left {
+    word-wrap: break-word;
+    height: 110px;
+    margin-right: 58%;
+    text-align: right;
+  }
+  &__text_right {
+    word-wrap: break-word;
+    height: 110px;
+    margin-left: 58%;
+    text-align: left;
+  }
+  &__text_heading {
+    font-family: $mainFontFamily;
+    font-style: normal;
+    font-weight: 700;
+    font-size: $fontSizeBaseMore;
+    line-height: 150%;
+
+    letter-spacing: 0.03em;
+
+    color: $commonColor;
+  }
+  &__text_main {
+    font-family: $mainFontFamily;
+    font-style: normal;
+    font-weight: 700;
+    font-size: $fontSizeBase;
+    line-height: 150%;
+
+    letter-spacing: 0.03em;
+
+    color: $contentColorLight;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .advantages {
+    margin-top: 100px;
+    position: relative;
+    &__img_step_graph_mobile {
+      display: block;
+    }
+    &__img_step_graph {
+      display: none;
+    }
+    &__step_graph {
+      margin-top: 39px;
+      display: flex;
+      justify-content: flex-start;
+    }
+    &__steps_text {
+      position: absolute;
+      height: 100%;
+      padding: 0 20;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    &__text_left {
+      word-wrap: break-word;
+      height: 110px;
+      margin-right: 0;
+      margin-left: 0;
+      text-align: left;
+    }
+    &__text_right {
+      word-wrap: break-word;
+      height: 110px;
+      margin-left: 0;
+      text-align: left;
+    }
+    &__text_heading {
+      font-size: $fontSizeBaseMoreMobile;
+    }
+    &__text_main {
+      font-size: $fontSizeBaseMobile;
+    }
+  }
+}

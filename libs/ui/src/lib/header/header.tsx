@@ -30,7 +30,7 @@ export const Header: React.FC<IHeaderProps> = (
       </Link>
       <div className={styles.links}>
         <Link className={styles.link} to="/token-list">
-          Все активы!!
+          Все активы
         </Link>
         <Link className={styles.link} to="/">
           Как это работает

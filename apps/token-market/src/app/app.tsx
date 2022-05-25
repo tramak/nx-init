@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import classNames from 'classnames';
 import { actions, useAppSelector, useRequest } from '@myorg/redux';
-import { Todos, Header } from '@myorg/ui';
+import { Todos, Header, SloganAndVideo, Advantages } from '@myorg/ui';
 import { Routes, Route } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -25,22 +25,22 @@ const Demo = () => {
   return (
     <>
       <Header status='' logout={() => {}} scrollToQuestionList={() => {}} />
+      <SloganAndVideo />
+      <Advantages />
 
-      ---------------------------------------------------
-      <h1>Todos</h1>
+      {/*<h1>Todos</h1>*/}
 
-      {JSON.stringify(requestTodos)}
+      {/*{JSON.stringify(requestTodos)}*/}
 
-      <Todos todos={todos} />
+      {/*<Todos todos={todos} />*/}
 
-      <button id="add-todo" onClick={addTodo} className={classNames({
-        test: true
-      })}>
-        Add Todo
-      </button>
+      {/*<button id="add-todo" onClick={addTodo} className={classNames({*/}
+      {/*  test: true*/}
+      {/*})}>*/}
+      {/*  Add Todo*/}
+      {/*</button>*/}
 
-      <br />
-      --------------------------------------------------------
+      {/*<br />*/}
     </>
   );
 };

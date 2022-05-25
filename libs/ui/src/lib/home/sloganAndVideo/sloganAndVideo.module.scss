@@ -1,0 +1,462 @@
+@import '../../../scss';
+
+.slogan_and_video {
+  margin-top: 205px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.modal__button {
+  border: none;
+  background: transparent;
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: $zIndexModal;
+  overflow-y: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.slogan {
+  max-width: 602px;
+
+  &__desc {
+    text-align: left;
+    font-family: $mainFontFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: $fontSizeBaseMore;
+    line-height: 180%;
+    letter-spacing: 0.03em;
+    color: $contentColorLight;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    max-width: 540px;
+  }
+
+  &__title {
+    max-width: 602px;
+    margin: 0;
+    margin-bottom: 60px;
+    text-align: left;
+    white-space: normal;
+    &_row {
+      white-space: normal;
+    }
+    &_bold {
+      word-wrap: break-word;
+      display: inline-block;
+      font-family: $mainFontFamily;
+      font-style: normal;
+      font-weight: bold;
+      font-size: $fontSizeBaseBiggest;
+      line-height: 125%;
+      white-space: pre-wrap;
+      letter-spacing: 0.04em;
+      color: $commonColor;
+    }
+    &_normal {
+      display: inline-block;
+      word-wrap: break-word;
+      font-family: $mainFontFamily;
+      font-style: normal;
+      font-weight: 400;
+      font-size: $fontSizeBaseBiggest;
+      line-height: 125%;
+      letter-spacing: 0.04em;
+      white-space: pre-wrap;
+      color: $commonColor;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $buttonMainColor;
+    border-radius: 20px;
+    width: 213px;
+    height: 54px;
+    border: none;
+    font-family: $mainFontFamily;
+    font-style: normal;
+    font-weight: 800;
+    font-size: $fontSizeBaseMore;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: $buttonMainFontColor;
+    cursor: pointer;
+  }
+}
+.title {
+  margin: 0;
+  text-align: left;
+  font-family: $mainFontFamily;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $fontSizeBaseBiggest;
+  line-height: 125%;
+  letter-spacing: 0.04em;
+  white-space: pre-wrap;
+  color: $commonColor;
+}
+
+.title_bold {
+  word-wrap: break-word;
+  display: inline-block;
+  font-family: $mainFontFamily;
+  font-style: normal;
+  font-weight: bold;
+  font-size: $fontSizeBaseBiggest;
+  line-height: 125%;
+  white-space: pre-wrap;
+  letter-spacing: 0.04em;
+  color: $commonColor;
+}
+
+.video {
+  margin-top: 30px;
+  background-image: url(./img/MainIllustration.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  height: 503px;
+  width: 680px;
+
+  &__desc {
+    font-family: $subFontFamily;
+    font-style: normal;
+    font-weight: 400;
+    font-size: $fontSizeBaseMore;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: $commonColor;
+    position: absolute;
+    left: 0;
+    bottom: -56px;
+  }
+
+  &__button {
+    cursor: pointer;
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    left: 0;
+    bottom: -9px;
+    background-color: transparent;
+    border: none;
+    background-image: url(./img/playButton.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    &__play {
+      margin-left: 5px;
+    }
+  }
+}
+
+.news_subscription {
+  margin-top: 150px;
+}
+
+.questions__list {
+  margin-top: 150px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1800px) {
+  .slogan_and_video {
+    margin-top: 205px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .video {
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 503px;
+    width: 680px;
+    margin: 0 auto;
+    background-image: url(./img/MainIllustration.png);
+
+    &__desc {
+      font-family: $subFontFamily;
+      font-style: normal;
+      font-weight: 400;
+      font-size: $fontSizeBaseMore;
+      line-height: 150%;
+      letter-spacing: 0.02em;
+      color: $commonColor;
+      position: absolute;
+      left: 0;
+      bottom: -56px;
+    }
+
+    &__button {
+      cursor: pointer;
+      width: 160px;
+      height: 160px;
+      position: absolute;
+      left: 0;
+      bottom: -9px;
+      background-color: transparent;
+      border: none;
+      background-image: url(./img/playButton.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+
+      &__play {
+        margin-left: 5px;
+      }
+    }
+  }
+  .slogan {
+    width: 100%;
+    max-width: 100%;
+    &__desc {
+      text-align: left;
+      font-family: $mainFontFamily;
+      font-style: normal;
+      font-weight: 500;
+      font-size: $fontSizeBaseMore;
+      line-height: 180%;
+      letter-spacing: 0.03em;
+      color: $contentColorLight;
+      margin-bottom: 60px;
+      margin-top: 60px;
+      max-width: 90%;
+    }
+
+    &__title {
+      max-width: 100%;
+      margin: 0;
+      margin-bottom: 60px;
+      text-align: left;
+      white-space: normal;
+      &_row {
+        white-space: normal;
+      }
+      &_bold {
+        word-wrap: break-word;
+        display: inline-block;
+        font-family: $mainFontFamily;
+        font-style: normal;
+        font-weight: bold;
+        font-size: $fontSizeBaseBiggest;
+        line-height: 125%;
+        white-space: pre-wrap;
+        letter-spacing: 0.04em;
+        color: $commonColor;
+      }
+      &_normal {
+        display: inline-block;
+        word-wrap: break-word;
+        font-family: $mainFontFamily;
+        font-style: normal;
+        font-weight: 400;
+        font-size: $fontSizeBaseBiggest;
+        line-height: 125%;
+        letter-spacing: 0.04em;
+        white-space: pre-wrap;
+        color: $commonColor;
+      }
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $buttonMainColor;
+      border-radius: 20px;
+      width: 213px;
+      height: 54px;
+      border: none;
+      font-family: $mainFontFamily;
+      font-style: normal;
+      font-weight: 800;
+      font-size: $fontSizeBaseMore;
+      line-height: 25px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      color: $buttonMainFontColor;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slogan {
+    max-width: 602px;
+
+    &__desc {
+      text-align: left;
+      font-family: $mainFontFamily;
+      font-style: normal;
+      font-weight: 500;
+      font-size: $fontSizeBaseMoreMobile;
+      line-height: 180%;
+      letter-spacing: 0.03em;
+      color: $contentColorLight;
+      margin-bottom: 60px;
+      margin-top: 25px;
+      max-width: 540px;
+    }
+
+    &__title {
+      max-width: 602px;
+      margin: 0;
+      margin-bottom: 60px;
+      text-align: left;
+      white-space: normal;
+      &_row {
+        white-space: normal;
+      }
+      &_bold {
+        word-wrap: break-word;
+        display: inline-block;
+        font-family: $mainFontFamily;
+        font-style: normal;
+        font-weight: bold;
+        font-size: $fontSizeBaseBiggestMobile;
+        line-height: 125%;
+        white-space: pre-wrap;
+        letter-spacing: 0.04em;
+        color: $commonColor;
+      }
+      &_normal {
+        display: inline-block;
+        word-wrap: break-word;
+        font-family: $mainFontFamily;
+        font-style: normal;
+        font-weight: 400;
+        font-size: $fontSizeBaseBiggestMobile;
+        line-height: 125%;
+        letter-spacing: 0.04em;
+        white-space: pre-wrap;
+        color: $commonColor;
+      }
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $buttonMainColor;
+      border-radius: 20px;
+      width: 100%;
+      height: 38px;
+      border: none;
+      font-family: $mainFontFamily;
+      font-style: normal;
+      font-weight: 800;
+      font-size: $fontSizeBaseMoreMobile;
+      line-height: 25px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      color: $buttonMainFontColor;
+      cursor: pointer;
+    }
+  }
+
+  .slogan_and_video {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .news_subscription {
+    margin-top: 120px;
+  }
+
+  .questions__list {
+    margin-top: 100px;
+  }
+  .video {
+    margin-top: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    position: relative;
+    height: 236px;
+    width: 320px;
+    background-image: url(./img/MainIllustrationMobile.png);
+
+    &__desc {
+      font-family: $subFontFamily;
+      font-style: normal;
+      font-weight: 400;
+      font-size: $fontSizeBaseMoreMobile;
+      line-height: 150%;
+      letter-spacing: 0.02em;
+      color: $commonColor;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -36px;
+    }
+
+    &__button {
+      cursor: pointer;
+      width: 160px;
+      height: 160px;
+      background-color: transparent;
+      border: none;
+      background-image: url(./img/playButton.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      position: static;
+      &__play {
+        margin-left: 5px;
+      }
+    }
+  }
+  .title {
+    font-size: $fontSizeBaseBigMobile;
+  }
+  .title_bold {
+    font-size: $fontSizeBaseBigMobile;
+  }
+
+}
