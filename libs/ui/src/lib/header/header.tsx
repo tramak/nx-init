@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import appLogo from './icons/appLogo.svg';
-import titleImage from './icons/titleImage.svg';
+import { Logo } from '../logo/logo';
 import styles from './header.module.scss';
 
 export interface IHeaderProps {
@@ -21,13 +20,7 @@ export const Header: React.FC<IHeaderProps> = (
 
   return (
     <div className={styles.header}>
-      <Link to="/" className={styles.logo}>
-        <img className={styles.logo__icon} src={appLogo} alt="logo" />
-        <div className={styles.right__side}>
-          <img className={styles.logo__right_side_icon} src={titleImage} alt="daofarm" />
-          <div className={styles.logo__title}>инвестируй в реальное</div>
-        </div>
-      </Link>
+      <Logo />
       <div className={styles.links}>
         <Link className={styles.link} to="/token-list">
           Все активы

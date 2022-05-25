@@ -1,0 +1,37 @@
+@import '../../scss';
+
+.logo__right_side_icon {
+  width: 109px;
+  height: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.icon {
+  margin-right: 13px;
+}
+
+.title {
+  margin-top: 7px;
+  font-family: $mainFontFamily;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $fontSizeSubSubHeader;
+  line-height: 125%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: left;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

@@ -15,35 +15,6 @@
   //}
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-.logo__icon {
-  margin-right: 13px;
-}
-
-.right__side {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.logo__title {
-  margin-top: 7px;
-  font-family: $mainFontFamily;
-  font-style: normal;
-  font-weight: 400;
-  font-size: $fontSizeSubSubHeader;
-  line-height: 125%;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: $commonColor;
-  text-align: left;
-}
-
 .links {
   display: flex;
 }

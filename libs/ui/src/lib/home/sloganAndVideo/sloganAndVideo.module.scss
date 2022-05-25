@@ -140,7 +140,7 @@
 
 .video {
   margin-top: 30px;
-  background-image: url(./img/MainIllustration.png);
+  background-image: url(./img/MainIllustration.svg);
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
@@ -169,7 +169,7 @@
     bottom: -9px;
     background-color: transparent;
     border: none;
-    background-image: url(./img/playButton.png);
+    background-image: url(./img/playButton.svg);
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
@@ -207,7 +207,7 @@
     height: 503px;
     width: 680px;
     margin: 0 auto;
-    background-image: url(./img/MainIllustration.png);
+    background-image: url(./img/MainIllustration.svg);
 
     &__desc {
       font-family: $subFontFamily;
@@ -231,7 +231,7 @@
       bottom: -9px;
       background-color: transparent;
       border: none;
-      background-image: url(./img/playButton.png);
+      background-image: url(./img/playButton.svg);
       background-position: center;
       background-repeat: no-repeat;
       display: flex;
@@ -417,7 +417,7 @@
     position: relative;
     height: 236px;
     width: 320px;
-    background-image: url(./img/MainIllustrationMobile.png);
+    background-image: url(./img/MainIllustrationMobile.svg);
 
     &__desc {
       font-family: $subFontFamily;
@@ -439,7 +439,7 @@
       height: 160px;
       background-color: transparent;
       border: none;
-      background-image: url(./img/playButton.png);
+      background-image: url(./img/playButton.svg);
       background-position: center;
       background-repeat: no-repeat;
       display: flex;
