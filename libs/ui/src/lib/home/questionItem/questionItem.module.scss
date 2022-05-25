@@ -1,2 +1,77 @@
 @import '../../../scss';
 
+.item {
+  padding: 29px 0;
+  border-top: solid 1px #0B0955;
+  display: flex;
+  justify-content: space-between;
+
+  &:last-child {
+    border-bottom: solid 1px #0B0955;
+  }
+}
+
+.itemData {
+  padding: 7px 0;
+}
+
+.question {
+  font-size: 24px;
+  line-height: 28px;
+  color: #0B0955;
+}
+
+.answer {
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: #6F6F80;
+  margin-top: 15px;
+  max-width: 700px;
+}
+
+.button {
+  background: #8981E7;
+  display: block;
+  width: 42px;
+  height: 42px;
+  border-radius: 42px;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    background: #7089E2;
+  }
+
+  &:before,
+  &:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    position: absolute;
+    transition: transform 0.3s ease;
+  }
+
+  &:before {
+    width: 19px;
+    height: 2px;
+    top: 20px;
+    left: 12px;
+  }
+
+  &:after {
+    width: 2px;
+    height: 19px;
+    top: 12px;
+    left: 20px;
+  }
+
+  &.open {
+    &:before {
+      transform: rotate(135deg);
+    }
+    &:after {
+      transform: rotate(135deg);
+    }
+  }
+}
