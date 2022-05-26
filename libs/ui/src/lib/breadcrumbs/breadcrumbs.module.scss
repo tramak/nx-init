@@ -1,0 +1,21 @@
+@import '../../scss';
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  color: #A09FAE;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.link {
+  color: #0B0955;
+  text-decoration: none;
+}
+
+.sep {
+  padding: 0 5px;
+}

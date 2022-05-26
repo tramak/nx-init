@@ -3,7 +3,7 @@ module.exports = {
   preset: '../../jest.preset.ts',
   transform: {
     '^.+\\.[tj]sx?$': 'babel-jest',
-    '^.+\\.svg$': '<rootDir>/svgTransform.js'
+    '^.+\\.svg$': '<rootDir>/../../jest/svgTransform.js'
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/libs/ui',
