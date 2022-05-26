@@ -1,0 +1,22 @@
+@import '../../../scss';
+
+.block {
+  display: flex;
+  align-items: baseline;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 125%;
+  letter-spacing: 0.04em;
+  color: #0B0955;
+}
+
+.data {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  color: #6F6F80;
+  margin-left: 20px;
+}

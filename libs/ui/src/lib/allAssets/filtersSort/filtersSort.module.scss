@@ -1,0 +1,57 @@
+@import '../filters/filters.module';
+
+.sortWrapper {
+  position: relative;
+
+  @include mediaMax($screenMd) {
+    position: static;
+  }
+}
+
+.iconSort {
+  margin-right: 10px;
+
+  @include mediaMax($screenMd) {
+    svg {
+      width: 20px;
+      height: 18px;
+    }
+  }
+}
+
+.sortMenu {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 25px rgba(137, 140, 153, 0.25);
+  border-radius: 20px;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  width: 319px;
+
+  @include mediaMax($screenMd) {
+    top: 10px;
+    width: auto;
+  }
+}
+
+.sortMenuItem {
+  font-size: 18px;
+  line-height: 180%;
+  letter-spacing: 0.03em;
+  color: #6F6F80;
+  cursor: pointer;
+
+  &.active,
+  &:hover {
+    color: #8981E7;
+    text-decoration: underline;
+  }
+}
+
+.label {
+  @include mediaMax($screenMd) {
+    display: none;
+  }
+}

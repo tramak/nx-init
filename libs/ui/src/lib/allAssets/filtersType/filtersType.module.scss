@@ -1,0 +1,80 @@
+@import '../filters/filters.module';
+
+.filterDataActive {
+  display: none;
+  cursor: pointer;
+
+  @include mediaMax($screenMd) {
+    display: flex;
+    align-items: center;
+    color: #8981E7;
+
+    .icon {
+      background: #8981E7;
+      border-color: #8981E7;
+      color: #ffffff;
+    }
+  }
+}
+
+.chk {
+  color: #8981E7;
+  margin-left: 16px;
+}
+
+.icon {
+  background: transparent;
+  color: #8981E7;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  border: solid 1px #EDEEF0;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+
+  @include mediaMax($screenMd) {
+    width: 32px;
+    height: 32px;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .filter.active &,
+  .filter:hover & {
+    background: #8981E7;
+    border-color: #8981E7;
+    color: #ffffff;
+  }
+}
+
+.filterWrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include mediaMax($screenMd) {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    background: #FFFFFF;
+    box-shadow: 0 4px 25px rgba(137, 140, 153, 0.25);
+    border-radius: 20px;
+    display: none;
+    padding: 15px 40px 15px 20px;
+
+    &.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+}
+

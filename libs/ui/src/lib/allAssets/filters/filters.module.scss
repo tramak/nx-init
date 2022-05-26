@@ -1,0 +1,111 @@
+@import '../../../scss';
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  padding-bottom: 10px;
+  position: relative;
+
+  &:before {
+    background: #D4D4D4;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    //border-bottom: 1px solid #D4D4D4;
+
+    @include mediaMax($screenMd) {
+      width: calc(100% - 64px);
+      left: 32px;
+    }
+  }
+
+  @include mediaMax($screenMd) {
+    display: flex;
+  }
+}
+
+.right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+  min-height: 32px;
+
+  @include mediaMax($screenMd) {
+    border-left: 1px solid #D4D4D4;
+    padding-left: 22px;
+    width: 30%;
+  }
+}
+
+.filter {
+  color: #6F6F80;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &.active,
+  &:hover {
+    color: #8981E7;
+  }
+
+  @include mediaEx() {
+    margin-left: 50px;
+  }
+
+  @include mediaLg() {
+    margin-left: 40px;
+  }
+
+  @include mediaMd() {
+    margin-left: 10px;
+  }
+
+  @include mediaMax($screenMd) {
+    margin-top: 15px;
+    width: 100%;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.menuWrapper {
+  display: flex;
+  align-items: center;
+
+  @include mediaMax($screenMd) {
+    display: none;
+  }
+}
+
+.iconMenu {
+  margin-right: 27px;
+  color: #A09FAE;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover,
+  &.active {
+    color: #8981E7;
+  }
+
+  @include mediaLg {
+    margin-right: 20px;
+  }
+
+  @include mediaMd() {
+    margin-right: 5px;
+  }
+}
